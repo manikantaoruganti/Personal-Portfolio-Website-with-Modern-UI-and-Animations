@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Caches
+.vite/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.vercel/
+.turbo/
+
+# Build output
+dist/
+build/
+out/
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.bak
+*.user
+*.code-workspace
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+Dockerfile.local
+docker-compose.local.yml
