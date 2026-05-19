@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles for scroll behavior and reduced motion */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar for a sleek look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717; /* background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9E7FFF; /* primary color */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c5eff; /* slightly darker primary on hover */
+}
+
+/* Base styles for headings and body text */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #FFFFFF;
+}
+
+p, span, div, a, li {
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+}
+
+/* Custom utility classes */
+.glassmorphism {
+  background: rgba(40, 40, 40, 0.3); /* Darker transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #9E7FFF, #38bdf8);
+  background-size: 200% 200%;
+  animation: gradient-move 10s ease infinite alternate;
+}
+
+.animated-blob-1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at center, #9E7FFF 0%, transparent 70%);
+  filter: blur(80px);
+  opacity: 0.7;
+  animation: blob-pulse 8s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+.animated-blob-2 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, #38bdf8 0%, transparent 70%);
+  filter: blur(70px);
+  opacity: 0.6;
+  animation: blob-pulse-alt 10s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+.animated-blob-3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #f472b6 0%, transparent 70%);
+  filter: blur(60px);
+  opacity: 0.5;
+  animation: blob-pulse 12s ease-in-out infinite alternate-reverse;
+  z-index: -1;
+}
